@@ -98,29 +98,34 @@ hangman = (
 playagain = 0
 
 while playagain == 0:
-
-    words = ("COMPUTER", "TELEVISION", "CERTIFICATE", "OFFICE", "MONITOR", "KEYBOARD", "DRIVEWAY", "STAIRCASE")
+    textfile = open("Itemsinhome.txt", "r")
+    words = textfile.readlines()
+    
     num = random.randrange(0, len(words))
     word = words[num] #Word contains the string of the randomly chosen word
     man = 0
     usedletters = ""
     countused = 0
-
     wordlist = [] #wordlist is a list version of the word
     count = 0
     for letters in word:
+        if letters == "\n":
+            break
         wordlist += word[count]
         count += 1
 
+    print(wordlist)
+
     modifiedword = [] #modifiedword starts out as list that contains spaces (# of spaces = # of letters in word)
-    for letters in word:
+
+    for letters in wordlist:
         modifiedword += "_"
 
     origword = wordlist[:] #Preserve the original wordlist by copying to origword
 
     while modifiedword != origword: #modifiedword starts as spaces, but will ultimately become origword as user takes guesses
         inputletter = raw_input("\n\nGuess a letter: ")
-        inputletter = inputletter.upper() #for consistency, take users letter and make it capital.
+        inputletter = inputletter.lower() #for consistency, take users letter and make it capital.
 
         if inputletter in wordlist: #if the users letter is in the wordlist, then get the index of the letter in word list
             index = wordlist.index(inputletter)

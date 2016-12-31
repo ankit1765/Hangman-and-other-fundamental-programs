@@ -1,0 +1,43 @@
+attic
+basement
+bathroom
+bathtub
+bed
+bedroom
+blanket
+book shelf
+ceiling
+chair
+chest 
+closet
+coffee table
+couch
+cupboard
+desk
+door
+dryer
+entrance
+floor
+furniture
+garden
+hallway
+house
+kitchen
+living room
+microwave
+mirror
+oven
+pillow
+radio
+refrigerator
+room
+sink
+stove
+table
+television
+toilet
+vacuum 
+wall
+washer
+window
+	
